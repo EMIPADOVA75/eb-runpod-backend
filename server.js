@@ -1,5 +1,7 @@
-import express from "express";
+const express = require("express");
 const app = express();
+
 app.get("/", (req, res) => res.send("OK: backend up"));
-const PORT = process.env.PORT || 8080; // Render passa PORT in automatico
-app.listen(PORT, () => console.log("Listening on", PORT));
+
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, "0.0.0.0", () => console.log("Listening on", PORT));
